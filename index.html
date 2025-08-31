@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P016N56HE4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-P016N56HE4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Order Dynamics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="follower"></div>
+    <div class="target"></div>
+    
+    <div class="controls">
+        <div class="control-group">
+            <label>Frequency (f)</label>
+            <div class="input-row">
+                <input type="range" id="fSlider" min="0" max="10" step="0.1" value="2.5">
+                <input type="number" id="fInput" value="2.5" step="0.1" min="0">
+            </div>
+        </div>
+        <div class="control-group">
+            <label>Damping (z)</label>
+            <div class="input-row">
+                <input type="range" id="zSlider" min="0" max="2" step="0.05" value="0.65">
+                <input type="number" id="zInput" value="0.65" step="0.05" min="0">
+            </div>
+        </div>
+        <div class="control-group">
+            <label>Response (r)</label>
+            <div class="input-row">
+                <input type="range" id="rSlider" min="-2" max="2" step="0.05" value="1.0">
+                <input type="number" id="rInput" value="1.0" step="0.05">
+            </div>
+        </div>
+        <div class="control-group">
+            <label>Shape Sides (0 for circle, 1 for dot)</label>
+            <div class="input-row">
+                <input type="range" id="sidesSlider" min="0" max="12" step="1" value="0">
+                <input type="number" id="sidesInput" value="0" step="1" min="0" max="12">
+            </div>
+        </div>
+        <div class="control-group theme-switcher">
+            <label for="themeToggle">Dark Mode</label>
+            <div class="toggle-container">
+                <input type="checkbox" id="themeToggle" class="toggle-checkbox">
+                <label for="themeToggle" class="toggle-label"></label>
+            </div>
+        </div>
+    </div>
+
+    <script src="vec2.js"></script>
+    <script src="dynamics.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
